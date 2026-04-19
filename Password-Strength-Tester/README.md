@@ -52,11 +52,14 @@ No build step or dependencies are required.
 
 ## Screenshots
 
-Add screenshots after running the app:
+### Light Mode (Strong Password)
+![Light mode - strong password](image/README/1776620927086.png)
 
-- Main view with weak password
-- Main view with strong password
-- Dark mode view
+### Dark Mode (Medium Password)
+![Dark mode - medium password](image/README/1776620970500.png)
+
+### Dark Mode (Strong Password)
+![Dark mode - strong password](image/README/1776620978354.png)
 
 ## File Structure
 
