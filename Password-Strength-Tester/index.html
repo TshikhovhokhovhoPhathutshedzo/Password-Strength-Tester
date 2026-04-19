@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Tester</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Password Strength Tester</h1>
+      <p>Analyze password security in real time with practical feedback.</p>
+    </header>
+
+    <section class="card">
+      <div class="row between">
+        <label for="passwordInput">Enter Password</label>
+        <button id="darkModeBtn" class="btn secondary" type="button">Toggle Dark Mode</button>
+      </div>
+
+      <div class="password-field">
+        <input id="passwordInput" type="password" autocomplete="off" placeholder="Type your password..." />
+        <button id="togglePasswordBtn" class="btn small" type="button">Show</button>
+      </div>
+
+      <div class="row gap">
+        <button id="generateBtn" class="btn" type="button">Generate Password</button>
+        <button id="copyBtn" class="btn secondary" type="button">Copy Password</button>
+      </div>
+
+      <div class="meter-wrap">
+        <div class="meter">
+          <div id="meterBar" class="meter-bar"></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <p><strong>Strength:</strong> <span id="strengthText">Weak</span></p>
+        <p><strong>Score:</strong> <span id="scoreText">0/100</span></p>
+        <p><strong>Estimated Crack Time:</strong> <span id="crackTimeText">Instantly</span></p>
+        <p><strong>Breach Check:</strong> <span id="breachText">Not checked</span></p>
+      </div>
+
+      <section class="feedback">
+        <h2>Feedback</h2>
+        <ul id="feedbackList">
+          <li>Start typing to analyze your password.</li>
+        </ul>
+      </section>
+
+      <p class="note">
+        Security note: Passwords are processed locally in your browser and are not stored.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

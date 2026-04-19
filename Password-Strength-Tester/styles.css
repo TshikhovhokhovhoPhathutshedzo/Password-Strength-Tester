@@ -1,0 +1,161 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #151926;
+  --muted: #5e6478;
+  --border: #d8ddea;
+  --weak: #e63946;
+  --medium: #f4b400;
+  --strong: #2a9d8f;
+  --btn: #2d6cdf;
+  --btn-secondary: #edf1fb;
+}
+
+body.dark {
+  --bg: #0f131d;
+  --card: #171d2b;
+  --text: #f2f5ff;
+  --muted: #b1bad1;
+  --border: #2f3850;
+  --btn: #5a8bff;
+  --btn-secondary: #27314a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.container {
+  width: min(760px, 100%);
+}
+
+.header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.header p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.gap {
+  gap: 0.6rem;
+  margin: 0.75rem 0 0.4rem;
+}
+
+.password-field {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.6rem 0;
+}
+
+input[type="password"],
+input[type="text"] {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.7rem 0.9rem;
+  background: var(--btn);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: var(--btn-secondary);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn.small {
+  min-width: 76px;
+}
+
+.meter-wrap {
+  margin: 1rem 0 0.7rem;
+}
+
+.meter {
+  width: 100%;
+  height: 12px;
+  background: var(--btn-secondary);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.meter-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--weak);
+  transition: width 0.25s ease, background 0.25s ease, transform 0.2s ease;
+  transform-origin: left;
+}
+
+.meter-bar.pulse {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(1.03); }
+  100% { transform: scaleX(1); }
+}
+
+.stats p {
+  margin: 0.45rem 0;
+}
+
+.feedback h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.feedback ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.feedback li {
+  margin: 0.3rem 0;
+}
+
+.note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
